@@ -29,14 +29,22 @@ import {
   CampanaIcon,
 } from "./icons/Icons";
 import { MinusIcon, PlusIcon } from "lucide-react";
+import { Baloo_Bhai_2 } from "next/font/google";
+
+const balooBhai2 = Baloo_Bhai_2({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+});
 
 export function Dashboard() {
   return (
     <div className="bg-white min-h-screen">
       <div className="flex min-h-scren">
         <div className="w-[15%] bg-[#1d4db0] p-6 relative text-white min-h-full">
-          <div className="mb-10 flex justify-center {`${balooBhai2.className}`}">
-            <h1 className="text-[#52A5F5] text-bold"> Smart</h1>
+          <div
+            className={`mb-10 flex justify-center  text-2xl font-extrabold ${balooBhai2.className}`}
+          >
+            <h1 className="text-[#52A5F5] ">Smart</h1>
             <h1>Water</h1>
           </div>
           <div className="space-y-2">
@@ -58,10 +66,10 @@ export function Dashboard() {
                 <span className="ml-2 flex-grow">Mapa de Clientes</span>
               </div>
             </Button>
-            <Button className="flex items-center justify-between w-full text-left">
+            <Button className="flex items-center justify-between w-full text-left flex-wrap">
               <div className="flex items-center flex-grow">
                 <EnviosIcon />
-                <span className="ml-2 flex-grow">
+                <span className="ml-2 flex-grow whitespace-normal">
                   Monitoreo de Distribuidores
                 </span>
               </div>
@@ -337,7 +345,7 @@ export function Dashboard() {
             </div>
             <div className="bg-white p-4 rounded-xl border border-gray-400"></div>
           </div>
-          <div className="bg-[#F0F2F5] p-4 rounded-lg">
+          <div className="border border-gray-400 p-4 rounded-lg">
             <BarChart className="w-full h-[300px]" />
           </div>
         </div>
@@ -351,18 +359,37 @@ function BarChart(props: any) {
     <div {...props}>
       <ResponsiveBar
         data={[
-          { name: "Jan", count: 111 },
-          { name: "Feb", count: 157 },
-          { name: "Mar", count: 129 },
-          { name: "Apr", count: 150 },
-          { name: "May", count: 119 },
-          { name: "Jun", count: 72 },
+          {
+            day: "1",
+            count1: 189,
+            count2: Math.floor(Math.random() * 200),
+          },
+          {
+            day: "2",
+            count1: Math.floor(Math.random() * 200),
+            count2: Math.floor(Math.random() * 200),
+          },
+          {
+            day: "3",
+            count1: Math.floor(Math.random() * 200),
+            count2: Math.floor(Math.random() * 200),
+          },
+          {
+            day: "4",
+            count1: Math.floor(Math.random() * 200),
+            count2: Math.floor(Math.random() * 200),
+          },
+          {
+            day: "5",
+            count1: Math.floor(Math.random() * 200),
+            count2: Math.floor(Math.random() * 200),
+          },
         ]}
-        keys={["count"]}
-        indexBy="name"
+        keys={["count1", "count2"]}
+        indexBy="day"
         margin={{ top: 0, right: 0, bottom: 40, left: 40 }}
         padding={0.3}
-        colors={["#2563eb"]}
+        colors={["#1A3D7D", "#367DFD"]}
         axisBottom={{
           tickSize: 0,
           tickPadding: 16,
@@ -394,6 +421,7 @@ function BarChart(props: any) {
         enableLabel={false}
         role="application"
         ariaLabel="A bar chart showing data"
+        groupMode="grouped"
       />
     </div>
   );
