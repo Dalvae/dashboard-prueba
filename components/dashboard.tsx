@@ -204,7 +204,7 @@ export function Dashboard() {
                   <div className="w-1/3 flex justify-end">
                     <div className="bg-[#1A3D7D] flex items-center rounded-xl px-3 py-1">
                       <DineroIcon />
-                      <span className="text-bold text-white">100 Bs.</span>
+                      <span className="text-bold text-white ml-3">100 Bs.</span>
                     </div>
                   </div>
                 </div>
@@ -230,7 +230,7 @@ export function Dashboard() {
                   <div className="w-1/3 flex justify-end">
                     <div className="bg-[#1A3D7D] flex items-center rounded-xl px-3 py-1">
                       <DineroIcon />
-                      <span className="text-bold text-white">100 Bs.</span>
+                      <span className="text-bold text-white ml-3">100 Bs.</span>
                     </div>
                   </div>
                 </div>
@@ -256,7 +256,7 @@ export function Dashboard() {
                   <div className="w-1/3 flex justify-end">
                     <div className="bg-[#1A3D7D] flex items-center rounded-xl px-3 py-1">
                       <DineroIcon />
-                      <span className="text-bold text-white">100 Bs.</span>
+                      <span className="text-bold text-white ml-3">100 Bs.</span>
                     </div>
                   </div>
                 </div>
@@ -275,14 +275,14 @@ export function Dashboard() {
                     </div>
                   </div>
                   <div className="w-1/3 flex justify-center">
-                    <span className="border border-[#1A3D7D] rounded-xl px-3 py-1 whitespace-nowrap">
+                    <span className="border border-[#1A3D7D] rounded-xl px-3 py-1 self-center whitespace-nowrap">
                       20/01/2023
                     </span>
                   </div>
                   <div className="w-1/3 flex justify-end">
                     <div className="bg-[#1A3D7D] flex items-center rounded-xl px-3 py-1">
                       <DineroIcon />
-                      <span className="text-bold text-white">100 Bs.</span>
+                      <span className="text-bold text-white ml-3">100 Bs.</span>
                     </div>
                   </div>
                 </div>
@@ -346,7 +346,7 @@ export function Dashboard() {
   );
 }
 
-function BarChart(props) {
+function BarChart(props: any) {
   return (
     <div {...props}>
       <ResponsiveBar
