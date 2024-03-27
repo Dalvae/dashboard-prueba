@@ -48,8 +48,9 @@ export function Dashboard() {
             <h1>Water</h1>
           </div>
           <div className="space-y-2">
-            <Button className="flex items-center justify-between w-full text-left bg-white ">
-              <div className="flex items-center flex-grow">
+            <Button className="flex items-center justify-between w-full text-left bg-white overflow-visible relative">
+              <div className="absolute left-0 top-1/2 transform -translate-y-1/2 w-1 z-50  overflow-visible h-6 bg-[#697EED] rounded-r-full"></div>
+              <div className="flex items-center flex-grow pl-4">
                 <InicioIcon />
                 <span className="ml-2 flex-grow text-black">Inicio</span>
               </div>
